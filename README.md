@@ -21,13 +21,13 @@ Fork the Repository: Start by forking the Equinox repository to your GitHub acco
 Clone the Repository: Clone the forked repository to your local machine.
 
 
-#Copy code 
-```bash git clone https://github.com/your-username/equinox.git ```
+Copy code 
+``` git clone https://github.com/your-username/equinox.git ```
 
 Create a Branch: Create a new branch for your contributions.
 
-#Copy code
-```bash git checkout -b feature/new-feature ```
+Copy code
+``` git checkout -b feature/new-feature ```
 
 Make Changes: Implement your improvements, fix bugs, or add new features.
 
