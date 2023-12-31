@@ -1,9 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer tailwind-base, primereact, tailwind-utilities;
 
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 30, 30, 30;
   --background-end-rgb: 15, 15, 15;
 }
@@ -17,6 +23,7 @@
 }
 
 body {
+  
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +31,38 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+a:visited {
+  color: #ffF;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: #22d3ee;
+  text-decoration: none;
+}
+
+
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.p-card {
+  background: #1f2937;
+  color: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-image:
+  linear-gradient( to bottom, #2b2b2b, rgba(0, 0, 0, 0), #00c4e2, rgba(0, 0, 0, 0), #1d1d1d ) 50 100%;
+		
 }
