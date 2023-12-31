@@ -7,7 +7,7 @@ Equinox is a game where players explore the vast reaches of the solar system, mi
 ## How Can You Contribute?
 Equinox is currently in development, and your expertise can make a significant impact. Whether you're an experienced developer or just starting, there are various ways to contribute:
 
-Code Contributions: Dive into the codebase, offer improvements, and help implement new features. The technologies used include Next.js, Typescript, React, PostgreSQL, Tailwind CSS, Nebula, and PrimeReact.
+Code Contributions: Dive into the codebase, offer improvements, and help implement new features. The technologies used include Next.js, Typescript, React, PostgreSQL, Tailwind CSS and PrimeReact.
 
 Testing and Feedback: Playtest the game, identify bugs, and provide valuable feedback. Your insights can help enhance the overall gaming experience.
 
@@ -21,12 +21,12 @@ Fork the Repository: Start by forking the Equinox repository to your GitHub acco
 Clone the Repository: Clone the forked repository to your local machine.
 
 
-Copy code 
+#Copy code 
 ```bash git clone https://github.com/your-username/equinox.git ```
 
 Create a Branch: Create a new branch for your contributions.
 
-Copy code
+#Copy code
 ```bash git checkout -b feature/new-feature ```
 
 Make Changes: Implement your improvements, fix bugs, or add new features.
@@ -45,6 +45,6 @@ Thank you for considering contributing to Equinox. Your enthusiasm and skills ar
 
 Happy Coding!
 
-[Your Name]
+Alexander
 Equinox Developer
 
