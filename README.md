@@ -16,15 +16,17 @@ Documentation: Contribute to improving the project's documentation, making it mo
 Design and Ideas: Share your creative ideas for game mechanics, visuals, and overall design. Your input can elevate Equinox to new heights.
 
 ## How to Get Started
-Fork the Repository: Start by forking the Equinox repository to your GitHub account.
+# Fork the Repository: 
+Start by forking the Equinox repository to your GitHub account.
 
-Clone the Repository: Clone the forked repository to your local machine.
-
+# Clone the Repository: 
+Clone the forked repository to your local machine.
 
 Copy code 
 ``` git clone https://github.com/your-username/equinox.git ```
 
-Create a Branch: Create a new branch for your contributions.
+# Create a Branch: 
+Create a new branch for your contributions.
 
 Copy code
 ``` git checkout -b feature/new-feature ```
