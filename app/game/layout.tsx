@@ -26,14 +26,20 @@ export default function RootLayout({
             <div className="aside aside-1">
             <Menu  />
             </div>
+
+
             <main className="main">{children}</main>
+
 
             <div className="aside aside-2">
             <Userpanel  />
             </div>
+
             <div className="footer">
             <Footer  />
             </div>
+
+
             </div>
           </PrimeReactProvider>
         );
