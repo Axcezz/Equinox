@@ -19,13 +19,13 @@ Design and Ideas: Share your creative ideas for game mechanics, visuals, and ove
 # Fork the Repository: 
 Start by forking the Equinox repository to your GitHub account.
 
-# Clone the Repository: 
+### Clone the Repository: 
 Clone the forked repository to your local machine.
 
 Copy code 
 ``` git clone https://github.com/your-username/equinox.git ```
 
-# Create a Branch: 
+### Create a Branch: 
 Create a new branch for your contributions.
 
 Copy code
