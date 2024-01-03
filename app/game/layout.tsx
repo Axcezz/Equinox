@@ -35,9 +35,9 @@ export default function RootLayout({
             <Userpanel  />
             </div>
 
-            <div className="footer">
+            {/* <div className="footer">
             <Footer  />
-            </div>
+            </div> */}
 
 
             </div>
