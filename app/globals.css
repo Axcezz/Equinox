@@ -74,6 +74,7 @@ a:active {
   text-align: center; 
   padding:0;
   margin:0;
+  height:100vh;
 }
 
 .wrapper > * {
@@ -83,18 +84,15 @@ a:active {
 }
 
 .header {
-
   height:100px;
 }
 
 .footer {
-
   height:50px;
 }
 
 .main {
   text-align: left;
-
   width:100%;
 }
 
@@ -104,11 +102,11 @@ a:active {
 }
 
 .aside-2 {
-  width:250px;
+  width:200px;
 }
 
 @media all and (min-width: 600px) {
-  .aside { flex: 0.5 0 0; }
+  .aside { flex: 0.3 0 0; }
 }
 
 @media all and (min-width: 800px) {
@@ -181,11 +179,6 @@ h2.menuheader:after {
 /*  END MAIN MENU STYLE   */
 
 /*  SIDEBAR STYLES */
-.aside-2 {
- 
-  
-  text-align: center;
-}
 .avatar {
 padding:10px;
 width:190px;
@@ -195,7 +188,7 @@ border-radius:100px 100px 100px 100px;
 	
 }
 .avatarBorder {
-
+  border: 10px solid linear-gradient(to right, #111111, #444444, #26b3f7, #444444, #111111);
 	top:10px;
 	width:200px;
 	height:211px;
@@ -222,30 +215,8 @@ border-radius:100px 100px 100px 100px;
 	text-align: center;
 	color:white;
 }
-.stats {
-	display: block;
-	font-size: 1em;
-	color:#fff;
-	text-align:initial;
-	padding:4px;
 
 
-}.stats Image {
-vertical-align: middle;
-height:20px;
-	width:20px;
-	margin-bottom: 3px;
-	margin-right:4px;
-
-
-}
-.health progress  {
-
-	background-color:#fff;
-	border: 1px solid #000;
-	color:#fff;
-	
-	}
 	
 
 /*  END SIDEBAR STYLES */

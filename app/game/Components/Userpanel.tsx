@@ -45,31 +45,31 @@ function Userpanel() {
     </a>
 </div>
 
-<div style={{ display: 'flex', gap: '10px' }}>
-  <span className="stats">
-    <Image src={RankIcon} alt='Rank' width="25" height="25" />
-    <span id="rankValue">Commander</span>
-  </span>
+<div className="flex flex-column">
+<div className="flex m-2">
+    <Image src={RankIcon} alt='Rank' className='size-6'/>
+    <span className="pb-1 pl-2"  id="rankValue">Commander</span>
+  </div>
 
-  <span className="stats">
-    <Image src={FederationIcon} alt='Federation' width="25" height="25" />
-    <span id="federationValue">Raiders</span>
-  </span>
+  <div className="flex  m-2">
+    <Image src={FederationIcon} alt='Federation'className='size-6' />
+    <span className="pb-1 pl-2"  id="federationValue">Raiders</span>
+  </div>
 
-  <span className="stats">
-    <Image src={PlanetIcon} alt="Planet" width="25" height="25" />
-    <span id="locationValue">Earth</span>
-  </span>
+  <div className="flex m-2">
+    <Image src={PlanetIcon} alt="Planet" className='size-6'/>
+    <span className="pb-1 pl-2"  id="locationValue">Earth</span>
+  </div>
 
-  <span className="stats">
-    <Image src={MoneyIcon} alt='Money' />
-    <span id="moneyValue">10000</span>
-  </span>
+  <div className="flex  m-2">
+    <Image src={MoneyIcon} alt='Money' className='size-6' />
+    <span className="pb-1 pl-2" id="moneyValue">10000</span>
+  </div>
 
-  <span className="stats">
-    <Image src={CreditIcon} alt="Credits" /> 
-    <span id="creditsValue">100</span>
-  </span>
+  <div className="flex  m-2">
+    <Image src={CreditIcon} alt="Credits" className='size-6' /> 
+    <span className="pb-1 pl-2" id="creditsValue">100</span>
+  </div>
 </div>
       </div>
     )
