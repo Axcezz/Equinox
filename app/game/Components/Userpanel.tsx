@@ -9,7 +9,9 @@ import RankIcon from '/public/icons/rank.png'
 import FederationIcon from '/public/icons/federation.png'
 import PlanetIcon from '/public/icons/planet.png'
 import MoneyIcon from '/public/icons/money_icon.png'
-import CreditIcon from '/public/icons/credit_icon.png'  
+import CreditIcon from '/public/icons/credit_icon.png' 
+
+import { ProgressBar } from 'primereact/progressbar';
 
 
 function Userpanel() {
@@ -70,7 +72,84 @@ function Userpanel() {
     <Image src={CreditIcon} alt="Credits" className='size-6' /> 
     <span className="pb-1 pl-2" id="creditsValue">100</span>
   </div>
+
+
+<div className="w-44">
+<span className="pb-1 pl-2">Health</span>
+<ProgressBar
+    value={50}
+    pt={{
+        value: { style: { color: '#ffffff' , background: 'linear-gradient(to right, #8f0000, #d42727)'} }
+    }}
+></ProgressBar>
+  </div>
+  <div className="w-44">
+<span className="pb-1 pl-2">Energy</span>
+<ProgressBar
+    value={50}
+></ProgressBar>
+  </div>
+  <div className="w-44">
+<span className="pb-1 pl-2">Fuel</span>
+<ProgressBar
+    value={50}
+    pt={{
+        value: { style: { color: '#ffffff' , background: 'linear-gradient(to right, #fff600, #d2c100)'} }
+    }}
+></ProgressBar>
+  </div>
+  <div className="w-44 pt-4">
+<span className="pt-5">Resources</span>
+
+<div className="grid">
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+          360</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+          360</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+          360</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+          360</div>
+    </div>
+
 </div>
+
+<div className="grid">
+<div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/>  
+        360</div>
+    </div>
+    <div className="col ">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+          360</div>
+    </div>
+    <div className="col">
+        <div className="text-center content-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+        360</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
+        360</div>
+    </div>
+</div>
+  </div>
+
+  </div>
       </div>
     )
   }

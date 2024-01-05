@@ -1,4 +1,7 @@
 'use client'
+
+import Link from 'next/link'
+
 function Menu() {
     return (
 
@@ -12,8 +15,8 @@ function Menu() {
 <li><a href='todos.php' target='trigger'>Todos</a></li>
 
 <h2 className="menuheader">General</h2>
-	<li><a href="gameforum.php" target="main">Game Forum</a></li>
-	<li><a href="news.php" target="trigger">News & Updates</a></li>
+	<li><Link href="/game/gameforum">Game Forum</Link></li>
+	<li><Link href="/game">News & Updates</Link></li>
 	<li><a href="tos.php" target="trigger">Terms Of Service</a></li>
 	<li><a href="faq.php" target="trigger">FAQ's</a></li>
 	<li><a href="helpcenter.php" target="trigger">Support</a></li>
