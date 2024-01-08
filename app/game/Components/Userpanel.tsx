@@ -10,6 +10,22 @@ import FederationIcon from '/public/icons/federation.png'
 import PlanetIcon from '/public/icons/planet.png'
 import MoneyIcon from '/public/icons/money_icon.png'
 import CreditIcon from '/public/icons/credit_icon.png' 
+import AluminiumOre from '/public/icons/resources/AluminiumOre.png' 
+import CopperOre from '/public/icons/resources/CopperOre.png' 
+import IronOre from '/public/icons/resources/IronOre.png' 
+import GoldOre from '/public/icons/resources/GoldOre.png' 
+import MagnesiumOre from '/public/icons/resources/MagnesiumOre.png' 
+import ErestrumOre from '/public/icons/resources/ErestrumOre.png' 
+import NeodymiumOre from '/public/icons/resources/NeodymiumOre.png' 
+import PentaxidOre from '/public/icons/resources/PentaxidOre.png' 
+import PlatinOre from '/public/icons/resources/PlatinOre.png' 
+import PromethiumOre from '/public/icons/resources/CobaltOre.png' 
+import SathiumOre from '/public/icons/resources/SathiumOre.png' 
+import SiliconOre from '/public/icons/resources/SiliconOre.png' 
+import Sulfur from '/public/icons/resources/Sulfur.png' 
+import TitanOre from '/public/icons/resources/TitanOre.png' 
+import ZascosiumOre from '/public/icons/resources/ZascosiumOre.png' 
+import CobaltOre from '/public/icons/resources/CobaltOre.png' 
 
 import { ProgressBar } from 'primereact/progressbar';
 
@@ -104,23 +120,23 @@ function Userpanel() {
 <div className="grid">
     <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-          360</div>
+        <Image src={CopperOre} alt="Copper Ore" className='size-6'/> 
+          999</div>
     </div>
     <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-          360</div>
+        <Image src={AluminiumOre} alt="Aluminium Ore" className='size-6'/> 
+          258</div>
     </div>
     <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-          360</div>
+        <Image src={IronOre} alt="Iron Ore" className='size-6'/> 
+          126</div>
     </div>
     <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-          360</div>
+        <Image src={GoldOre} alt="Gold Ore" className='size-6'/> 
+          86</div>
     </div>
 
 </div>
@@ -128,29 +144,74 @@ function Userpanel() {
 <div className="grid">
 <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/>  
-        360</div>
+        <Image src={MagnesiumOre} alt="Magnesium Ore" className='size-6'/>  
+        22</div>
     </div>
     <div className="col ">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-          360</div>
+        <Image src={CobaltOre} alt="Cobalt Ore" className='size-6'/> 
+          31</div>
     </div>
     <div className="col">
         <div className="text-center content-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-        360</div>
+        <Image src={ErestrumOre} alt="Erestrum Ore" className='size-6'/> 
+        3</div>
     </div>
     <div className="col">
         <div className="text-center text-xs p-1 ">
-        <Image src={PlanetIcon} alt="Planet" className='size-6'/> 
-        360</div>
+        <Image src={NeodymiumOre} alt="Neodymium Ore" className='size-6'/> 
+        12</div>
     </div>
 </div>
+  
+  <div className="grid">
+<div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PentaxidOre} alt="Pentaxid Ore" className='size-6'/>  
+        12</div>
+    </div>
+    <div className="col ">
+        <div className="text-center text-xs p-1 ">
+        <Image src={PlatinOre} alt="Platin Ore" className='size-6'/> 
+          28</div>
+    </div>
+    <div className="col">
+        <div className="text-center content-center text-xs p-1 ">
+        <Image src={PromethiumOre} alt="Promethium Ore" className='size-6'/> 
+        3</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={ZascosiumOre} alt="Zascosium Ore" className='size-6'/> 
+        0</div>
+    </div>
+    </div>
+  <div className="grid">
+<div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={SathiumOre} alt="Sathium Ore" className='size-6'/>  
+        2</div>
+    </div>
+    <div className="col ">
+        <div className="text-center text-xs p-1 ">
+        <Image src={SiliconOre} alt="Silicon Ore" className='size-6'/> 
+          36</div>
+    </div>
+    <div className="col">
+        <div className="text-center content-center text-xs p-1 ">
+        <Image src={Sulfur} alt="Sulfur" className='size-6'/> 
+        89</div>
+    </div>
+    <div className="col">
+        <div className="text-center text-xs p-1 ">
+        <Image src={TitanOre} alt="Titan Ore" className='size-6'/> 
+        46</div>
+    </div>
+</div>
+</div>
+</div>
   </div>
-
-  </div>
-      </div>
+     
     )
   }
   
