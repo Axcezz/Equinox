@@ -10,22 +10,22 @@ import FederationIcon from '/public/icons/federation.png'
 import PlanetIcon from '/public/icons/planet.png'
 import MoneyIcon from '/public/icons/money_icon.png'
 import CreditIcon from '/public/icons/credit_icon.png' 
-import AluminiumOre from '/public/icons/resources/AluminiumOre.png' 
-import CopperOre from '/public/icons/resources/CopperOre.png' 
-import IronOre from '/public/icons/resources/IronOre.png' 
-import GoldOre from '/public/icons/resources/GoldOre.png' 
-import MagnesiumOre from '/public/icons/resources/MagnesiumOre.png' 
-import ErestrumOre from '/public/icons/resources/ErestrumOre.png' 
-import NeodymiumOre from '/public/icons/resources/NeodymiumOre.png' 
-import PentaxidOre from '/public/icons/resources/PentaxidOre.png' 
-import PlatinOre from '/public/icons/resources/PlatinOre.png' 
-import PromethiumOre from '/public/icons/resources/CobaltOre.png' 
-import SathiumOre from '/public/icons/resources/SathiumOre.png' 
-import SiliconOre from '/public/icons/resources/SiliconOre.png' 
-import Sulfur from '/public/icons/resources/Sulfur.png' 
-import TitanOre from '/public/icons/resources/TitanOre.png' 
-import ZascosiumOre from '/public/icons/resources/ZascosiumOre.png' 
-import CobaltOre from '/public/icons/resources/CobaltOre.png' 
+import AluminiumOre from '/public/resources/AluminiumOre.png' 
+import CopperOre from '/public/resources/CopperOre.png' 
+import IronOre from '/public/resources/IronOre.png' 
+import GoldOre from '/public/resources/GoldOre.png' 
+import MagnesiumOre from '/public/resources/MagnesiumOre.png' 
+import ErestrumOre from '/public/resources/ErestrumOre.png' 
+import NeodymiumOre from '/public/resources/NeodymiumOre.png' 
+import PentaxidOre from '/public/resources/PentaxidOre.png' 
+import PlatinOre from '/public/resources/PlatinOre.png' 
+import PromethiumOre from '/public/resources/CobaltOre.png' 
+import SathiumOre from '/public/resources/SathiumOre.png' 
+import SiliconOre from '/public/resources/SiliconOre.png' 
+import Sulfur from '/public/resources/Sulfur.png' 
+import TitanOre from '/public/resources/TitanOre.png' 
+import ZascosiumOre from '/public/resources/ZascosiumOre.png' 
+import CobaltOre from '/public/resources/CobaltOre.png' 
 
 import { ProgressBar } from 'primereact/progressbar';
 
@@ -37,26 +37,32 @@ function Userpanel() {
     <Image src={ProfileImage} alt='Profile Image' className='avatar'/>
 </div>
 <span className="welcome">
+  {/* 
+Should show the users name.
+*/}
     Alexander
 </span>
-<span className="lvl">
-    lvl. 1
-</span>
 <div style={{ display: 'flex', justifyContent: 'center' , gap: '10px' }}>
- 
+ {/* 
+Route the users to the messages page.
+*/}
     <a href="messages.php" className="notification" target="trigger">
       <span>
         <Image alt='mail' src={MailIcon} width="35" height="25" />
       </span>
     </a>
-
+ {/* 
+Route the users to the inventory page.
+*/}
     <a href="inventory.php" className="" target="trigger">
       <span>
         <Image src={InventoryIcon} width="30" height="25" alt="Inventory" />
       </span>
     </a>
-
-    <a href="spaceship.php" className="" target="trigger">
+ {/* 
+Route the users to the hangar page.
+*/}
+    <a href="/game/hangar" className="" target="trigger">
       <span>
         <Image src={SpaceshipIcon} width="25" height="30" alt="Spaceship" />
       </span>
@@ -64,32 +70,49 @@ function Userpanel() {
 </div>
 
 <div className="flex flex-column">
+   {/* 
+The rank the user has.
+*/}
 <div className="flex m-2">
     <Image src={RankIcon} alt='Rank' className='size-6'/>
     <span className="pb-1 pl-2"  id="rankValue">Commander</span>
   </div>
 
+ {/* 
+The name of the federation the user is part of
+*/}
   <div className="flex  m-2">
     <Image src={FederationIcon} alt='Federation'className='size-6' />
     <span className="pb-1 pl-2"  id="federationValue">Raiders</span>
   </div>
 
+ {/* 
+The Location of the user has.
+*/}
   <div className="flex m-2">
     <Image src={PlanetIcon} alt="Planet" className='size-6'/>
     <span className="pb-1 pl-2"  id="locationValue">Earth</span>
   </div>
 
+ {/* 
+The amount of Money the user has.
+*/}
   <div className="flex  m-2">
     <Image src={MoneyIcon} alt='Money' className='size-6' />
     <span className="pb-1 pl-2" id="moneyValue">10000</span>
   </div>
 
+ {/* 
+The amount of credits the user has.
+*/}
   <div className="flex  m-2">
     <Image src={CreditIcon} alt="Credits" className='size-6' /> 
     <span className="pb-1 pl-2" id="creditsValue">100</span>
   </div>
 
-
+   {/* 
+The amount of health the user has. Might want it to show in numbers like full health 100/100. so they can buy more health or craft health booster.
+*/}
 <div className="w-44">
 <span className="pb-1 pl-2">Health</span>
 <ProgressBar
@@ -99,12 +122,20 @@ function Userpanel() {
     }}
 ></ProgressBar>
   </div>
+
+    {/* 
+The amount of Energy the user has. Might want it to show in numbers like full energy 100/100. so they can buy more energy or craft energy booster.
+*/}
   <div className="w-44">
 <span className="pb-1 pl-2">Energy</span>
 <ProgressBar
     value={50}
 ></ProgressBar>
   </div>
+
+   {/* 
+The amount of fuel the user has. Might want it to show in numbers like full fuel 100/100. so they can buy more fuel or craft fuel booster.
+*/}
   <div className="w-44">
 <span className="pb-1 pl-2">Fuel</span>
 <ProgressBar
@@ -114,6 +145,10 @@ function Userpanel() {
     }}
 ></ProgressBar>
   </div>
+
+     {/* 
+Not sure on this. Might move this to the inventory page. where they can get an overview of all the resources they have rather than just ores.
+*/}
   <div className="w-44 pt-4">
 <span className="pt-5">Resources</span>
 

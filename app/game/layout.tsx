@@ -18,24 +18,36 @@ export default function RootLayout({
         return (
           <PrimeReactProvider>
             <div className="wrapper">
-
+      {/* 
+     Header where the Logo is displayed.
+      */}
             <div className="header" >
             <Header />
             </div>
-
+      {/* 
+     Aside where the menu is displayed.
+      */}
             <div className="aside aside-1">
             <Menu  />
             </div>
 
+      {/* 
+     where the content should be displayed.
+      */}
 
             <main className="main">{children}</main>
 
+      {/* 
+     Aside where the userpanel is displayed.
+      */}
 
             <div className="aside aside-2">
             <Userpanel  />
             </div>
 
-            {/* <div className="footer">
+            {/* not sure if i would use the footer. maybe for a chat function or something.
+            
+            <div className="footer">
             <Footer  />
             </div> */}
 

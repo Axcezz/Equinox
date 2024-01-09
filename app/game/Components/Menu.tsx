@@ -31,7 +31,6 @@ function Menu() {
 	<li><Link href="/game/work">Work</Link></li>
 	<li><Link href="/game/shop">Shop</Link></li>
 	<li><Link href="/game/hospital">Hospital</Link></li>
-	<li><Link href="/game/hangar">Hangar</Link></li>
 	<li><Link href="/game/properties">Properties</Link></li>
 	<li><Link href="/game/bank">Bank</Link></li>
 	<li><Link href="/game/casino">Casino</Link></li>
