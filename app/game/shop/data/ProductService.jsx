@@ -4,26 +4,24 @@ export const ProductService = {
             {
                 id: '1000',
                 code: 'f230fh0g3',
-                name: 'Bamboo Watch',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 65,
                 category: 'Accessories',
                 quantity: 24,
                 inventoryStatus: 'INSTOCK',
-                rating: 5
             },
             {
                 id: '1001',
                 code: 'nvklal433',
-                name: 'Black Watch',
+                name: 'Adrenaline Shot',
                 description: 'Product Description',
                 image: '/items/AdrenalineShot.png',
                 price: 72,
                 category: 'Accessories',
                 quantity: 61,
                 inventoryStatus: 'INSTOCK',
-                rating: 4
             },
             {
                 id: '1002',
@@ -35,7 +33,6 @@ export const ProductService = {
                 category: 'Fitness',
                 quantity: 2,
                 inventoryStatus: 'LOWSTOCK',
-                rating: 3
             },
             {
                 id: '1003',
@@ -47,7 +44,6 @@ export const ProductService = {
                 category: 'Clothing',
                 quantity: 25,
                 inventoryStatus: 'INSTOCK',
-                rating: 5
             },
             {
                 id: '1004',
@@ -59,7 +55,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 73,
                 inventoryStatus: 'INSTOCK',
-                rating: 4
             },
             {
                 id: '1005',
@@ -71,7 +66,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 0,
                 inventoryStatus: 'OUTOFSTOCK',
-                rating: 4
             },
             {
                 id: '1006',
@@ -83,7 +77,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 5,
                 inventoryStatus: 'LOWSTOCK',
-                rating: 3
             },
             {
                 id: '1007',
@@ -95,7 +88,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 23,
                 inventoryStatus: 'INSTOCK',
-                rating: 5
             },
             {
                 id: '1008',
@@ -107,7 +99,6 @@ export const ProductService = {
                 category: 'Electronics',
                 quantity: 2,
                 inventoryStatus: 'LOWSTOCK',
-                rating: 4
             },
             {
                 id: '1009',
@@ -119,7 +110,6 @@ export const ProductService = {
                 category: 'Electronics',
                 quantity: 63,
                 inventoryStatus: 'INSTOCK',
-                rating: 3
             },
             {
                 id: '1010',
@@ -131,7 +121,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 0,
                 inventoryStatus: 'OUTOFSTOCK',
-                rating: 4
             }
 
         ];
@@ -149,7 +138,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 24,
                 inventoryStatus: 'INSTOCK',
-                rating: 5,
                 orders: [
                     {
                         id: '1000-0',
@@ -199,7 +187,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 61,
                 inventoryStatus: 'INSTOCK',
-                rating: 4,
                 orders: [
                     {
                         id: '1001-0',
@@ -231,7 +218,6 @@ export const ProductService = {
                 category: 'Fitness',
                 quantity: 2,
                 inventoryStatus: 'LOWSTOCK',
-                rating: 3,
                 orders: [
                     {
                         id: '1002-0',
@@ -263,7 +249,6 @@ export const ProductService = {
                 category: 'Clothing',
                 quantity: 25,
                 inventoryStatus: 'INSTOCK',
-                rating: 5,
                 orders: []
             },
             {
@@ -276,7 +261,6 @@ export const ProductService = {
                 category: 'Accessories',
                 quantity: 73,
                 inventoryStatus: 'INSTOCK',
-                rating: 4,
                 orders: [
                     {
                         id: '1004-0',

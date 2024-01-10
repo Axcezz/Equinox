@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 function Header() {
     return (
-    <div className="flex justify-center items-center flex-col p-1">
+    <div className="w-full p-2">
     <Image src={Logo} alt='Logo' className=" w-auto h-28 " />
     </div>  
     )

@@ -16,7 +16,6 @@ interface Product {
     category: string;
     quantity: number;
     inventoryStatus: string;
-    rating: number;
 }
 
 export default function BasicDemo() {
@@ -49,7 +48,7 @@ export default function BasicDemo() {
             <div className="col-12">
                 <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">         
 
-                    <Image className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" width="128" height="128" src={product.image} alt={product.name} />
+                    <Image className="w-4 sm:w-8rem xl:w-5rem block xl:block mx-auto border-round" width="128" height="128" src={product.image} alt={product.name} />
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
                         <div className="flex flex-column align-items-center sm:align-items-start gap-3">
                             <div className="text-2xl font-bold text-900">{product.name}</div>
@@ -75,7 +74,7 @@ export default function BasicDemo() {
     const gridItem = (product: Product) => {
         return (
             
-            <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
+            <div className="col-3 sm:col-6 lg:col-6 xl:col-3 p-2">
                 <div className="p-4 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                         <div className="flex align-items-center gap-2">
@@ -84,8 +83,8 @@ export default function BasicDemo() {
                         </div>
                         <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
                     </div>
-                    <div className="flex flex-column align-items-center gap-3 py-5">
-                        <Image className="w-9 shadow-2 border-round" width="128" height="128" src={product.image} alt={product.name} />
+                    <div className="flex flex-column align-items-center gap-2 py-5">
+                        <Image className="w-32 border-round" width="128" height="128" src={product.image} alt={product.name} />
                         <div className="text-2xl font-bold">{product.name}</div>
                     </div>
                     <div className="flex align-items-center justify-content-between">
