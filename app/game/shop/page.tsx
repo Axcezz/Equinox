@@ -5,7 +5,7 @@ import { Button } from 'primereact/button';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Tag } from 'primereact/tag';
 import Image from 'next/image';
-
+import MoneyIcon from '/public/icons/money_icon.png';
 interface Product {
     id: string;
     code: string;
@@ -61,7 +61,7 @@ export default function BasicDemo() {
                             </div>
                         </div>
                         <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
-                            <span className="text-2xl font-semibold">${product.price}</span>
+                            <span className="text-2xl font-semibold"><Image src={MoneyIcon} alt='Money' className='size-6' />{product.price}</span>
                             <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export default function BasicDemo() {
         return (
             
             <div className="col-3 sm:col-6 lg:col-6 xl:col-3 p-2">
-                <div className="p-4 border-1 surface-border surface-card border-round">
+                <div className="p-2 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                         <div className="flex align-items-center gap-2">
                             <i className="pi pi-tag"></i>
@@ -83,12 +83,17 @@ export default function BasicDemo() {
                         </div>
                         <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
                     </div>
-                    <div className="flex flex-column align-items-center gap-2 py-5">
+                    <div className="flex flex-column align-items-center gap-2 py-2">
                         <Image className="w-32 border-round" width="128" height="128" src={product.image} alt={product.name} />
                         <div className="text-2xl font-bold">{product.name}</div>
                     </div>
                     <div className="flex align-items-center justify-content-between">
-                        <span className="text-2xl font-semibold">${product.price}</span>
+                    
+                    
+                        <div className="flex align-items-center gap-2">
+                            <Image src={MoneyIcon} alt='Money' className='size-6' />
+                            <span className="text-1xl font-semibold">{product.price}</span>
+                        </div>
                         <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button>
                     </div>
                 </div>
@@ -115,8 +120,10 @@ export default function BasicDemo() {
     };
 
     return (
-        <div className="card content-center w-3/4">
-            <DataView value={products} itemTemplate={itemTemplate} layout={layout as 'list' | 'grid' | (string & Record<string, unknown>) | undefined} header={header()} />
+        <div className='justify-content-center w-3/4 mx-auto'>
+            <div className="card content-center">
+                <DataView value={products} itemTemplate={itemTemplate} layout={layout as 'list' | 'grid' | (string & Record<string, unknown>) | undefined} header={header()} />
+            </div>
         </div>
     )
 }
