@@ -26,7 +26,7 @@ export const ProductService = {
             {
                 id: '1002',
                 code: 'zz21cz3c1',
-                name: 'Blue Band',
+                name: 'Advanced Upgrade Kit',
                 description: 'Product Description',
                 image: '/items/AdvancedUpgradeKit.png',
                 price: 79,
@@ -37,7 +37,7 @@ export const ProductService = {
             {
                 id: '1003',
                 code: '244wgerg2',
-                name: 'Blue T-Shirt',
+                name: 'Ailien Egg',
                 description: 'Product Description',
                 image: '/items/AlienParts01.png',
                 price: 29,
@@ -48,7 +48,7 @@ export const ProductService = {
             {
                 id: '1004',
                 code: 'h456wer53',
-                name: 'Bracelet',
+                name: 'Computer',
                 description: 'Product Description',
                 image: '/items/Computer.png',
                 price: 15,
@@ -59,7 +59,7 @@ export const ProductService = {
             {
                 id: '1005',
                 code: 'av2231fwg',
-                name: 'Brown Purse',
+                name: 'Cold Boost Augment',
                 description: 'Product Description',
                 image: '/items/Eden_ColdBoostAugmented.png',
                 price: 120,
@@ -70,7 +70,7 @@ export const ProductService = {
             {
                 id: '1006',
                 code: 'bib36pfvm',
-                name: 'Chakra Bracelet',
+                name: 'Stamina Regen Kit',
                 description: 'Product Description',
                 image: '/items/Eden_StaminaRegenKit.png',
                 price: 32,
@@ -81,7 +81,7 @@ export const ProductService = {
             {
                 id: '1007',
                 code: 'mbvjkgip5',
-                name: 'Galaxy Earrings',
+                name: 'Insulation Boost',
                 description: 'Product Description',
                 image: '/items/InsulationBoost.png',
                 price: 34,
@@ -92,9 +92,9 @@ export const ProductService = {
             {
                 id: '1008',
                 code: 'vbb124btr',
-                name: 'Game Controller',
+                name: 'Armor Boost',
                 description: 'Product Description',
-                image: '/items/AblativeSpray.png',
+                image: '/items/ArmorBoost.png',
                 price: 99,
                 category: 'Electronics',
                 quantity: 2,
@@ -103,9 +103,9 @@ export const ProductService = {
             {
                 id: '1009',
                 code: 'cm230f032',
-                name: 'Gaming Set',
+                name: 'Bio Fuel',
                 description: 'Product Description',
-                image: '/items/AblativeSpray.png',
+                image: '/items/BioFuel.png',
                 price: 299,
                 category: 'Electronics',
                 quantity: 63,
@@ -114,9 +114,9 @@ export const ProductService = {
             {
                 id: '1010',
                 code: 'plb34234v',
-                name: 'Gold Phone Case',
+                name: 'Laser Kit',
                 description: 'Product Description',
-                image: '/items/AblativeSpray.png',
+                image: '/items/LaserKit.png',
                 price: 24,
                 category: 'Accessories',
                 quantity: 0,
@@ -131,7 +131,7 @@ export const ProductService = {
             {
                 id: '1000',
                 code: 'f230fh0g3',
-                name: 'Bamboo Watch',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 65,
@@ -180,7 +180,7 @@ export const ProductService = {
             {
                 id: '1001',
                 code: 'nvklal433',
-                name: 'Black Watch',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 72,
@@ -211,7 +211,7 @@ export const ProductService = {
             {
                 id: '1002',
                 code: 'zz21cz3c1',
-                name: 'Blue Band',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 79,
@@ -242,7 +242,7 @@ export const ProductService = {
             {
                 id: '1003',
                 code: '244wgerg2',
-                name: 'Blue T-Shirt',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 29,
@@ -254,7 +254,7 @@ export const ProductService = {
             {
                 id: '1004',
                 code: 'h456wer53',
-                name: 'Bracelet',
+                name: 'Ablative Spray',
                 description: 'Product Description',
                 image: '/items/AblativeSpray.png',
                 price: 15,

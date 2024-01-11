@@ -44,8 +44,12 @@ export default function BasicDemo() {
 
     const listItem = (product: Product) => {
         return (
-            
+   
             <div className="col-12">
+
+                         {/* 
+List Layout for the shop
+*/}
                 <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">         
 
                     <Image className="w-4 sm:w-8rem xl:w-5rem block xl:block mx-auto border-round" width="128" height="128" src={product.image} alt={product.name} />
@@ -61,7 +65,10 @@ export default function BasicDemo() {
                             </div>
                         </div>
                         <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
-                            <span className="text-2xl font-semibold"><Image src={MoneyIcon} alt='Money' className='size-6' />{product.price}</span>
+                        <div className="flex align-items-center gap-2">
+                            <Image src={MoneyIcon} alt='Money' className='size-6' />
+                            <span className="text-1xl font-semibold">{product.price}</span>
+                        </div>
                             <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button>
                         </div>
                     </div>
@@ -75,6 +82,10 @@ export default function BasicDemo() {
         return (
             
             <div className="col-3 sm:col-6 lg:col-6 xl:col-3 p-2">
+
+                {/* 
+Grid Layout for the shop
+*/}
                 <div className="p-2 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                         <div className="flex align-items-center gap-2">
