@@ -9,7 +9,7 @@ import rouletteImage from '/public/images/casino/roulette_logo.png'
 import plinkoImage from '/public/images/casino/plinko_logo.png'
 import pokerImage from '/public/images/casino/poker_logo.png'
 
-export default function Casino() {
+export default function bank() {
    
   return (
 

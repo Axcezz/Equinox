@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { Button } from 'primereact/button';
 import MoneyIcon from '/public/icons/money_icon.png'
 import Image from 'next/image';
-export default function GameForum() {
+export default function Mission() {
 {/* 
 dummy data for the Missions. This should be fetched from the database and displayed in the left collum. 
 When clicked it should display the mission description on the right collum where they also can accept the mission and see rewards.

@@ -18,7 +18,7 @@ interface Product {
     inventoryStatus: string;
 }
 
-export default function BasicDemo() {
+export default function Shop() {
     const [products, setProducts] = useState<Product[]>([]);
     const [layout, setLayout] = useState('grid');
 
