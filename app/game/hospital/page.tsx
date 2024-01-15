@@ -28,7 +28,7 @@ Price and health should be balanced.
         <Image alt="Card" src={HospitalImg} />
     );
     return (
-        <div className="card flex justify-content-center">
+        <div className="flex justify-center items-center flex-col justify-content-center w-full mx-auto">
             <Card title="Hospital" className="w-1/3" header={header} subTitle="While in hospital, you cannot do other activities. you can not be attacked or attack other players. Choose the amount of hours you want health care for.">
                 <div className="flex flex-column gap-3 ">
                     {categories.map((category) => {
@@ -45,7 +45,9 @@ Price and health should be balanced.
                         );
                     })}
                 </div>
-                <div className="pt-5 justify-content-center flex">
+               
+            </Card>
+            <div className="pt-5 justify-content-center flex">
                 Property is owned by <Link href="/" className="pl-1">Axcezz</Link>
                     {/* 
 If there is no owner, the user can buy the property for a defined price.
@@ -53,8 +55,6 @@ The property will be added to the users property list.
 The property will generate income based on users who use the hopital.
 */}
             </div>
-            </Card>
-
         </div>
     );
 }
