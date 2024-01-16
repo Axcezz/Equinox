@@ -24,10 +24,13 @@ export default function bank() {
             <div className="float-right">
                 <Card title="Send Money" className="mt-5 w-full" subTitle="Send money to another player"> 
                     <div className="grid grid-cols-3 gap-4 w-fit justify-content-center items-center">
+                        
                         <InputText className="col p-2" placeholder="Amount" />
                         <InputText className="col p-2" placeholder="Player" />
                         <Button label="Send"></Button>
+                       
                     </div>
+                    <span className='grid justify-content-center items-center pt-4 text-gray-400'>Transfer fee: 5%</span>
                 </Card>
                 <Card title="Send Credits" className="mt-5 w-full" subTitle="Send Credits to another player"> 
                     <div className="grid grid-cols-3 gap-4 w-fit justify-content-center items-center">
