@@ -31,6 +31,7 @@ interface DialogData {
   surfaceArea: number;
 }
 
+
 interface PlanetProps {
   planet: PlanetData;
   setDialogData: React.Dispatch<React.SetStateAction<DialogData | null>>;
@@ -65,7 +66,7 @@ function Explore() {
 
 function Sun() {
  
-  const texture = useLoader(THREE.TextureLoader, sunTexture);
+  const texture = useLoader(THREE.TextureLoader, sunTexture.src);
   return (
     <mesh>
       <sphereGeometry args={[2.5, 32, 32]} />
