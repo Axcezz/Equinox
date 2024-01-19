@@ -1,4 +1,3 @@
-import React from "react";
 import tx1 from "./textures/1.jpg";
 import tx2 from "./textures/2.jpg";
 import tx3 from "./textures/3.jpg";
@@ -22,7 +21,7 @@ const shuffle = (a) => {
 
 const textures = shuffle([tx1, tx2, tx3, tx4, tx5, tx6]);
 
-const PlanetData = () => {
+function planetData() {
   const planetData = [];
   const totalPlanets = 6;
   for (let index = 0; index < totalPlanets; index++) {
@@ -43,7 +42,7 @@ const PlanetData = () => {
     });
   }
 
-  return <div>{JSON.stringify(planetData)}</div>;
+  return planetData;
 };
 
-export default PlanetData;
+export default planetData;

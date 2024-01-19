@@ -8,7 +8,7 @@ import planetData from "./planetData";
 import sunTexture from "./textures/sun.jpg";
 import "./style.css";
 
-interface PlanetData {
+interface planetData {
   id: number;
   color: string;
   xRadius: number;
@@ -33,7 +33,7 @@ interface DialogData {
 
 
 interface PlanetProps {
-  planet: PlanetData;
+  planet: planetData;
   setDialogData: React.Dispatch<React.SetStateAction<DialogData | null>>;
 }
 
@@ -43,13 +43,15 @@ function Explore() {
     setDialogData(null);
   };
 
+  const planetDataArray = planetData();
+
   return (
     <>
       <Dialog hideDialog={hideDialog} dialogData={dialogData} />
       <Canvas camera={{ position: [0, 20, 25], fov: 45 }}>
         <Suspense fallback={null}>
           <Sun />
-            {Array.isArray(planetData) && planetData.map((planet: PlanetData) => (
+          {planetDataArray.map((planet: planetData) => (
             <Planet
               planet={planet}
               key={planet.id}
@@ -69,6 +71,7 @@ function Sun() {
   const texture = useLoader(THREE.TextureLoader, sunTexture.src);
   return (
     <mesh>
+      
       <sphereGeometry args={[2.5, 32, 32]} />
       <meshStandardMaterial map={texture} />
     </mesh>
@@ -77,7 +80,7 @@ function Sun() {
 
 function Planet({ planet, setDialogData }: PlanetProps) {
   const planetRef = useRef<THREE.Mesh>(null);
-  const texture = useLoader(THREE.TextureLoader, planet.textureMap);
+  const texture = useLoader(THREE.TextureLoader, planet.textureMap.src);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime() * planet.speed + planet.offset;
@@ -92,6 +95,7 @@ function Planet({ planet, setDialogData }: PlanetProps) {
 
   return (
     <>
+    
       <mesh
         ref={planetRef}
         onClick={() => {
@@ -103,6 +107,7 @@ function Planet({ planet, setDialogData }: PlanetProps) {
           });
         }}
       >
+        
         <sphereGeometry args={[planet.size, 32, 32]} />
         <meshStandardMaterial map={texture} />
         <Html distanceFactor={15}>
@@ -114,9 +119,17 @@ function Planet({ planet, setDialogData }: PlanetProps) {
   );
 }
 
+
+
+
+
+
+
+
 function Lights() {
   return (
     <>
+    
       <ambientLight />
       <pointLight position={[0, 0, 0]} />
     </>
@@ -136,6 +149,7 @@ function Ecliptic({ xRadius = 1, zRadius = 1 }) {
 
   const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
   return (
+    
     <lineSegments geometry={lineGeometry}>
       <lineBasicMaterial attach="material" color="#393e46" linewidth={10} />
     </lineSegments>
