@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-
+import Link from 'next/link';
 import ProfileImage from '/public/uploads/defaultprofileimg.png'
 import InventoryIcon from '/public/icons/inventory.png' 
 import MailIcon from '/public/icons/mail.png'
@@ -46,27 +46,27 @@ Should show the users name.
  {/* 
 Route the users to the messages page.
 */}
-    <a href="messages.php" className="notification" target="trigger">
+   <Link href="/game/messages" >
       <span>
         <Image alt='mail' src={MailIcon} width="35" height="25" />
       </span>
-    </a>
+      </Link>
  {/* 
 Route the users to the inventory page.
 */}
-    <a href="inventory.php" className="" target="trigger">
+   <Link href="/game/inventory" >
       <span>
         <Image src={InventoryIcon} width="30" height="25" alt="Inventory" />
       </span>
-    </a>
+      </Link>
  {/* 
 Route the users to the hangar page.
 */}
-    <a href="/game/hangar" className="" target="trigger">
+   <Link href="/game/hangar" >
       <span>
         <Image src={SpaceshipIcon} width="25" height="30" alt="Spaceship" />
       </span>
-    </a>
+      </Link>
 </div>
 
 <div className="flex flex-column">
