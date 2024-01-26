@@ -9,9 +9,9 @@ function Menu() {
 
 <ul id="menu">
 <h2 className="menuheader">Admin</h2>
-	<li><Link href='admin/dashboard'>Admin panel</Link></li>
-	<li><Link href='admin/test'>Test page</Link></li>
-	<li><Link href='admin/todos'>Todos</Link></li>
+	<li><Link href='game/admin'>Admin panel</Link></li>
+	<li><Link href='game/admin/test'>Test page</Link></li>
+	<li><Link href='game/admin/todos'>Todos</Link></li>
 
 <h2 className="menuheader">General</h2>
 	<li><Link href="/game/gameforum">Game Forum</Link></li>
@@ -36,7 +36,8 @@ function Menu() {
 	<li><Link href="/game/casino">Casino</Link></li>
 
 <h2 className="menuheader">Federation</h2>
-	<li><Link href="/">Command Center</Link></li>
+	<li><Link href="/game/command-center">Command Center</Link></li>
+	<li><Link href="/game/forum">Forum</Link></li>
 	<li><Link href="logout.tsx">Log Out</Link></li>
 </ul>
 
