@@ -38,7 +38,7 @@ function Menu() {
 <h2 className="menuheader">Federation</h2>
 	<li><Link href="/game/command-center">Command Center</Link></li>
 	<li><Link href="/game/forum">Forum</Link></li>
-	<li><Link href="logout.tsx">Log Out</Link></li>
+	<li><Link href="/">Log Out</Link></li>
 </ul>
 
 </div>
