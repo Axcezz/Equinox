@@ -9,9 +9,9 @@ function Menu() {
 
 <ul id="menu">
 <h2 className="menuheader">Admin</h2>
-	<li><Link href='game/admin'>Admin panel</Link></li>
-	<li><Link href='game/admin/test'>Test page</Link></li>
-	<li><Link href='game/admin/todos'>Todos</Link></li>
+	<li><Link href='/game/admin'>Admin panel</Link></li>
+	<li><Link href='/game/admin/test'>Test page</Link></li>
+	<li><Link href='/game/admin/todos'>Todos</Link></li>
 
 <h2 className="menuheader">General</h2>
 	<li><Link href="/game/gameforum">Game Forum</Link></li>

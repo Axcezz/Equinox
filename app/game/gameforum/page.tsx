@@ -34,7 +34,7 @@ dummy data for the posted by info.
   return (
 
 
-<div className="flex justify-center items-center pt-28 flex-col">
+<div className="flex justify-center items-center flex-col">
 <div className="grid">
 
 {/* 
