@@ -12,6 +12,7 @@
     "@flodlc/nebula": "^1.0.56",
     "@react-three/drei": "^9.97.0",
     "@react-three/fiber": "^8.15.16",
+    "@types/three": "^0.161.1",
     "next": "14.1.0",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
@@ -20,12 +21,14 @@
     "react": "^18",
     "react-dom": "^18",
     "react-modal": "^3.16.1",
-    "three": "^0.161.0"
+    "three": "^0.161.0",
+    "three-stdlib": "^2.29.4"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-modal": "^3.16.3",
     "autoprefixer": "^10.4.17",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
