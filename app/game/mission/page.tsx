@@ -1,8 +1,4 @@
 'use client'
-
-/* LOGO */
-
-/* Style Components */
 import { Card } from 'primereact/card';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -26,7 +22,7 @@ When clicked it should display the mission description on the right collum where
   return (
 
 
-<div className="flex justify-center items-center pt-28 flex-col justify-content-center w-3/4 mx-auto">
+<div className="flex justify-center items-center flex-col w-auto p-10">
 <div className="grid">
 
 {/* 
@@ -66,10 +62,10 @@ This right Collum should open the mission selected. The mission description, rew
 {/* 
 This is where the missions accepted will be placed. upon completeion the user should be able to claim the reward and XP. and the mission should be removed from the mission log.
 */}
-    <div className="grid pt-40">
+    <div className="grid">
     <div className="">
     <Card title="Mission Log" className="">       
-        <DataTable value={Mission} tableStyle={{ minWidth: '100rem' }}>
+        <DataTable value={Mission} tableStyle={{ minWidth: '80%' }}>
         <Column field="missionTitle" header="Mission Title"></Column>
         <Column field="category" header="Category"></Column>
         <Column field="status" header="Status"></Column>
