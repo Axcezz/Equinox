@@ -45,7 +45,7 @@ Need to Create a button for creating a new topic.
 
     <div className="col">
     <div className="p-3">
-        <Card title="Topics">       
+        <Card className="">       
         <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
     <Column field="topic" header="Topics"></Column>
     <Column field="replies" header="Replies"></Column>
