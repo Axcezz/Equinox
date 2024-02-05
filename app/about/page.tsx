@@ -39,7 +39,7 @@ export default function about() {
     The game is set in a distant future where humanity has colonized the solar system. <br />
     You will be able to explore the solar system, mine asteroids, build your own space ship, <br />
     base and will have the opertunity to join a federation and fight for control of the solar system. <br />
-    The game is currently in development and is being developed by a single developer. <br />
+    The game is currently in development and is being developed by a single developer.<br />
     The game is being developed using the following technologies: <br /><br />
     - Next.js <br />
     - Typescript <br />
