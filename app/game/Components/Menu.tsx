@@ -36,8 +36,12 @@ function Menu() {
 	<li><Link href="/game/casino">Casino</Link></li>
 
 <h2 className="menuheader">Federation</h2>
-	<li><Link href="/game/command-center">Command Center</Link></li>
-	<li><Link href="/game/forum">Forum</Link></li>
+	<li><Link href="/game/command-center">Federation Fleet</Link></li>
+	<li><Link href="/game/federation-forum">Federation Forum</Link></li>
+	<li><Link href="/game/command-center">Manage Federation</Link></li>
+	<li><Link href="/game/command-center">Federation HQ</Link></li>
+	<li><Link href="/game/command-center">Attack Federation</Link></li>
+	<li><Link href="/game/command-center">Join a Federation</Link></li>
 	<li><Link href="/">Log Out</Link></li>
 </ul>
 
