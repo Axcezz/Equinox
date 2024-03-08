@@ -10,6 +10,36 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("postgresql://postgres:wildchild@localhost:5432/Equinox")
 }
 
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  status    String   @default("Alive")
+  online    Boolean  @default(false)
+  money     Int      @default(1000)
+  credits   Int      @default(0)
+  xp        Int      @default(0)
+  rank      String   @default("Newbie")
+  health    Int      @default(100)
+  energy    Int      @default(100)
+  fuel      Int      @default(100)
+  location  String   @default("Earth")
+  
+  // Define UserInfo field to establish one-to-one relationship
+  profile  Profile?
+}
+
+model Profile {
+  name       String
+  age        Int
+  country    String
+
+  userId Int @unique
+  user   User @relation(fields: [userId], references: [id])
+  
+}
