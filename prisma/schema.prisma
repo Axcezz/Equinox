@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("postgresql://postgres:wildchild@localhost:5432/Equinox")
+  url      = env("DATABASE_URL")
 }
 
 model User {
