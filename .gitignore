@@ -8,6 +8,7 @@
 
 # testing
 /coverage
+.env
 
 # next.js
 /.next/
@@ -15,6 +16,7 @@
 
 # production
 /build
+.env
 
 # misc
 .DS_Store
