@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import Link from 'next/link';
 import Logo from '/public/Equinox_logo.png';
@@ -9,8 +10,7 @@ import { InputText } from "primereact/inputtext";
 import { Password } from 'primereact/password';
 import { Divider } from 'primereact/divider';
 import { Card } from 'primereact/card';
-import { registerUser } from '@/services/registerService'; // Import registerUser function
-import { GetServerSideProps } from 'next';
+import { Toast } from 'primereact/toast';
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -19,25 +19,30 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
-
-    if (!termsAccepted) {
-      alert("You must accept the terms of service");
-      return;
-    }
-
     try {
-      // Call registerUser function with form data and registration date
-      await registerUser(username, email, password, new Date());
-      alert('Registration successful!');
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          email,
+          password,
+          registrationDate: new Date(),
+        }),
+      });
+      if (!response.ok) {
+        throw new Error('Registration failed');
+      }
+
+      // handle successful registration
     } catch (error) {
-      alert(error.message); // Display any error message returned from registerUser
+      // handle error
+      console.error('Registration error:', error);
     }
   };
 
@@ -53,33 +58,48 @@ export default function Register() {
                              "sunScale": 5,
                              "planetsScale": 5,
                              "solarSystemOrbite": 79,
-                             "solarSystemSpeedOrbit": 30
+                             "solarSystemSpeedOrbit": 30,
+                             
        }} />
       <div className="flex items-center h-screen flex-col">
         <Image src={Logo} alt='Logo' className="z-10" />
         <Card title="Register" className="p-0 z-10">
+
+        <Toast ref={toast} />
           <form onSubmit={handleSubmit} className=" ">
             <span className="p-float-label mt-5">
+
               <InputText id="username" value={username} onChange={(e) => setUsername(e.target.value)} className="p-inputtext-lg" />
               <label className="ml-2" htmlFor="username">Username</label>
+
             </span>
             <span className="p-float-label mt-5">
+
               <InputText id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="p-inputtext-lg" />
               <label className="ml-2" htmlFor="email">E-mail</label>
+
             </span>
             <span className="p-float-label mt-5">
+
               <Password id="password" value={password} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} feedback={true} className="p-inputtext-lg" />
               <label className="ml-2" htmlFor="password">Password</label>
+
             </span>
             <span className="p-float-label mt-5">
+
               <Password id="confirmPassword" value={confirmPassword} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)} feedback={false} className="p-inputtext-lg" />
               <label className="ml-2" htmlFor="password">Confirm Password</label>
+
             </span>
             <div className="mt-2">
+
               <Checkbox inputId="termsAccepted" className="mr-2 mb-1" onChange={e => setTermsAccepted(e.checked || false)} checked={termsAccepted || false}></Checkbox>
               <label htmlFor="termsAccepted" className="text-lg mr-5 inline">Accept Terms of Service</label>
             </div>
+
+
             <Button type="submit" className="mt-5" label="Register" />
+            
           </form>
           <Divider />
           <p className="space-x-5">
@@ -93,10 +113,3 @@ export default function Register() {
     </div>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Fetch data or perform server-side operations here if needed
-  return {
-    props: {}, // Return any additional props needed by the component
-  };
-};
