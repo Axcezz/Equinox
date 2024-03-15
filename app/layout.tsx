@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "primeflex/primeflex.css";
 import { PrimeReactProvider } from 'primereact/api';
-
+import Provider  from "@/components/Provider";
 
 
 
@@ -19,18 +19,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
    
     <html lang="en">
   
       <body className={inter.className}>
-      
+  
       <PrimeReactProvider >
-        {children}
+      <Provider>{children}</Provider>
         </PrimeReactProvider>
+        
         </body>
       
     </html>

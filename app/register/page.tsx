@@ -3,70 +3,72 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import Logo from '/public/Equinox_logo.png';
 import Image from 'next/image';
-import { ReactNebula } from "@flodlc/nebula";
+
 import { Button } from 'primereact/button';
 import { Checkbox } from "primereact/checkbox";
 import { InputText } from "primereact/inputtext";
-import { Password } from 'primereact/password';
+import { Password, PasswordState } from 'primereact/password';
 import { Divider } from 'primereact/divider';
 import { Card } from 'primereact/card';
-import { Toast } from 'primereact/toast';
+import { trpc } from "@/server/client";
 
 export default function Register() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const [username, setUsername] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
+  const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
-    try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username,
-          email,
-          password,
-          registrationDate: new Date(),
-        }),
-      });
-      if (!response.ok) {
-        throw new Error('Registration failed');
-      }
 
-      // handle successful registration
-    } catch (error) {
-      // handle error
-      console.error('Registration error:', error);
+  const getUsers = trpc.user.getUsers.useQuery();
+  const addUser = trpc.user.addUser.useMutation(
+    {
+      onSettled: () => {
+        getUsers.refetch();
+      },
     }
-  };
+  );
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     const response = await fetch('/api/register', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         username,
+//         email,
+//         password,
+//         registrationDate: new Date(),
+//       }),
+//     });
+//     if (!response.ok) {
+//       throw new Error('Registration failed');
+//     }
+
+//     // handle successful registration
+//   } catch (error) {
+//     // handle error
+//     console.error('Registration error:', error);
+//   }
+// };
 
   return (
     <div>
-      <ReactNebula config={{ 
-                             "starsCount": 300,
-                             "starsColor": "#FFFFFF",
-                             "starsRotationSpeed": 4.2,
-                             "cometFrequence": 98,
-                             "nebulasIntensity": 8,
-                             "bgColor": "rgb(8,8,8)",
-                             "sunScale": 5,
-                             "planetsScale": 5,
-                             "solarSystemOrbite": 79,
-                             "solarSystemSpeedOrbit": 30,
-                             
-       }} />
+
+
+
+
+
       <div className="flex items-center h-screen flex-col">
         <Image src={Logo} alt='Logo' className="z-10" />
         <Card title="Register" className="p-0 z-10">
 
-        <Toast ref={toast} />
-          <form onSubmit={handleSubmit} className=" ">
+          <form className=" ">
             <span className="p-float-label mt-5">
 
               <InputText id="username" value={username} onChange={(e) => setUsername(e.target.value)} className="p-inputtext-lg" />
@@ -98,7 +100,7 @@ export default function Register() {
             </div>
 
 
-            <Button type="submit" className="mt-5" label="Register" />
+            <Button type="submit" className="mt-5" label="Register" onClick ={() => addUser.mutate({username, email, password })} />
             
           </form>
           <Divider />
@@ -110,6 +112,8 @@ export default function Register() {
           </p>
         </Card>
       </div>
+ 
     </div>
+    
   );
 }
