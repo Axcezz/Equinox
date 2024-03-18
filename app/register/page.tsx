@@ -21,41 +21,17 @@ export default function Register() {
   const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
 
-  const getUsers = trpc.user.getUsers.useQuery();
   const addUser = trpc.user.addUser.useMutation(
     {
       onSettled: () => {
-        getUsers.refetch();
+        setUsername('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
+        setTermsAccepted(false);
       },
     }
   );
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   try {
-//     const response = await fetch('/api/register', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({
-//         username,
-//         email,
-//         password,
-//         registrationDate: new Date(),
-//       }),
-//     });
-//     if (!response.ok) {
-//       throw new Error('Registration failed');
-//     }
-
-//     // handle successful registration
-//   } catch (error) {
-//     // handle error
-//     console.error('Registration error:', error);
-//   }
-// };
 
   return (
     <div>
@@ -87,12 +63,7 @@ export default function Register() {
               <label className="ml-2" htmlFor="password">Password</label>
 
             </span>
-            <span className="p-float-label mt-5">
 
-              <Password id="confirmPassword" value={confirmPassword} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)} feedback={false} className="p-inputtext-lg" />
-              <label className="ml-2" htmlFor="password">Confirm Password</label>
-
-            </span>
             <div className="mt-2">
 
               <Checkbox inputId="termsAccepted" className="mr-2 mb-1" onChange={e => setTermsAccepted(e.checked || false)} checked={termsAccepted || false}></Checkbox>
